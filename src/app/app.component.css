@@ -1,0 +1,29 @@
+p{
+    color: darkblue;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+svg{
+    background: rgb(255, 255, 255);
+    align-items: center;
+}
+svg text{
+    font-size: 4rem;
+    stroke-width: 3px;
+    fill: transparent;
+    stroke: #1b1a1a;
+    letter-spacing: 2px;
+    animation:effect 6s infinite alternate;
+}
+@keyframes effect {
+    0%{
+        stroke-dasharray: 0 70%;
+    }
+    100%{
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: 10%;
+    }
+}
