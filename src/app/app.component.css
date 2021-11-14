@@ -1,29 +1,60 @@
-p{
-    color: darkblue;
+p {
+  color: darkblue;
 }
+
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-  }
-svg{
-    background: rgb(255, 255, 255);
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
 }
-svg text{
-    font-size: 4rem;
-    stroke-width: 3px;
-    fill: transparent;
-    stroke: #1b1a1a;
-    letter-spacing: 2px;
-    animation:effect 6s infinite alternate;
+
+svg {
+  background: rgb(255, 255, 255);
+  align-items: center;
+  margin-top: 50px;
 }
+
+svg text {
+  font-size: 4rem;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke: #1b1a1a;
+  letter-spacing: 2px;
+  animation: effect 6s infinite alternate;
+}
+
 @keyframes effect {
-    0%{
-        stroke-dasharray: 0 70%;
-    }
-    100%{
-        stroke-dasharray: 50% 0;
-        stroke-dashoffset: 10%;
-    }
+  0% {
+    stroke-dasharray: 0 70%;
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: 10%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

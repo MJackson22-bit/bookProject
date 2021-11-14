@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <body>
-    <div class="card" style="background-image: url(https://s3.amazonaws.com/online.storage/HSPMER/Resources/2be08681-549f-4f85-ac57-c5632584a2a9.jpg) ;">
-        <div class="overlay">
-            <div class="content">
-                <h2><span class="name">Título</span></h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <a href="#">Explore more</a>
+    <div class="column">
+        <div class="card" style="background-image: url({{currentBook?.image}}); ">
+            <div class="overlay">
+                <div class="content">
+                    <span *ngIf="isFavorite"><i class="icon ion-android-favorite"></i></span>
+                    <h2><span class="name">{{currentBook?.tittle}}</span></h2>
+                    <p>{{currentBook?.matter}}</p>
+                    <a href="#synopsis">Ir a Sinopsis</a>
+                    <button (click)="addFavorite()">{{textButtonFavorite}}</button>
+                </div>
             </div>
         </div>
     </div>

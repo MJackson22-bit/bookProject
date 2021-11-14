@@ -21,7 +21,7 @@
     color: #fff;
    }
    .nav-links a {
-    color: #fff;
+    color: rgb(3, 3, 3);
    }
    .logo {
     font-size: 32px;
@@ -32,7 +32,7 @@
     font-size: 18px;
    }
    .menu li:hover {
-    background-color: #272323;
+    background-color:#fff;
     border-radius: 5px;
     transition: 0.3s ease;
    }
@@ -47,19 +47,20 @@ input[type=checkbox]{
     font-size: 24px;
     user-select: none;
    }
-   @media (max-width: 1200px) {
+   @media (max-width: 1100px) {
    .menu { 
-    display:none;
-    position: absolute;
-    background-color:teal;
+    display: none;
+    position: relative;
+    background: #60efff;
     right: 0;
     left: 0;
     text-align: center;
+    color: #000000;
     padding: 16px 0;
    }
    .menu li:hover {
     display: inline-block;
-    background-color:#4c9e9e;
+    background-color:#fff;
     transition: 0.3s ease;
    }
    .menu li + li {
@@ -70,13 +71,5 @@ input[type=checkbox]{
    }
    .hamburger {
     display: block;
-   }
-   .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-   }
-   .dropdown li:hover {
-    background-color: #4c9e9e;
    }
    }

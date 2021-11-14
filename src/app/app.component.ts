@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Book } from './models/book';
+import { bookDescriptionJson } from './_files/book';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bookProject';
+  bookListObject: Book[] = bookDescriptionJson;
 }

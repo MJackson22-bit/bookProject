@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <app-menu></app-menu>
-<svg width="100vw" height="15vh">
-  <text x="45%" y="55%">Novedades</text>
+<svg width="100vw" height="5vh">
+  <text x="40%" y="95%">Novedades</text>
 </svg>
-<div class="wrapper">
-  <app-book></app-book>
-  <app-book></app-book>
-  <app-book></app-book>
-  <app-book></app-book>
-  <app-book></app-book>
-</div>
+<div class="row">
+  <app-book [currentBook]="item" *ngFor="let item of bookListObject"></app-book>
+</div> 
+<app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>
+<app-footer></app-footer>
