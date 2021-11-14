@@ -60,7 +60,9 @@ body {
   transition: .4s;
   transition-delay: .5s;
 }
-
+.input-group-prepend{
+    background-color: #fff;
+}
 .content p {
   font-size: 15px;
 }

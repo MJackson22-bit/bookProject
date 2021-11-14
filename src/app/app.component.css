@@ -58,3 +58,59 @@ svg text {
   display: table;
   clear: both;
 }
+.btn {
+    position: relative;
+    outline: none;
+    height: 38px;
+    width: 90px;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+  
+  }
+  
+  .border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 38px;
+    transition: .3s;
+  }
+  
+  .btn:hover .border {
+    width: 90px;
+    height: 48px;
+  }
+  
+  .box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #3641b7;
+    border-right: transparent;
+    border-bottom: transparent;
+    transition: .3s;
+  }
+  
+  .left-corner {
+    top: -2px;
+    left: -2px;
+  }
+  
+  .right-corner {
+    bottom: -2px;
+    right: -2px;
+    transform: rotate(180deg);
+  }
+  
+  .btn:hover .border .left-corner {
+    transform: translate(-5px, -5px);
+  }
+  
+  .btn:hover .border .right-corner {
+    transform: translate(5px, 5px)rotate(180deg)
+  }

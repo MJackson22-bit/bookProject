@@ -8,6 +8,15 @@ import { bookDescriptionJson } from './_files/book';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bookProject';
+  title = 'Book - Jack';
   bookListObject: Book[] = bookDescriptionJson;
+  bookToFind: string = "";
+  
+  findBook() {
+    this.bookListObject = bookDescriptionJson.filter(m => m.tittle.toLowerCase().includes(this.bookToFind.toLowerCase()));
+  }
+  resetListBook(){
+    this.bookListObject = bookDescriptionJson;
+    this.bookToFind = "";
+  }
 }
