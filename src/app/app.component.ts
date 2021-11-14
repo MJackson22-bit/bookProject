@@ -19,4 +19,7 @@ export class AppComponent {
     this.bookListObject = bookDescriptionJson;
     this.bookToFind = "";
   }
+  deleteBook(book: Book){
+    this.bookListObject = this.bookListObject.filter(m => m.id != book.id);
+  }
 }

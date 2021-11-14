@@ -20,7 +20,7 @@
   <text x="40%" y="95%">Novedades</text>
 </svg>
 <div class="row">
-  <app-book [currentBook]="item" *ngFor="let item of bookListObject"></app-book>
+  <app-book (deleteBookEventParent)="deleteBook($event)" [currentBook]="item" *ngFor="let item of bookListObject"></app-book>
 </div> 
 <app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>
 <app-footer></app-footer>

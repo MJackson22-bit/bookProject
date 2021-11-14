@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Book } from '../../models/book';
 
 @Component({
@@ -12,6 +12,8 @@ export class BookComponent implements OnInit {
   isFavorite: boolean = false;
   textButtonFavorite: string = 'Agregar a Favoritos';
 
+  @Output()
+  deleteBookEventParent = new EventEmitter<Book>();
   constructor() { }
 
   ngOnInit(): void {
@@ -24,5 +26,8 @@ export class BookComponent implements OnInit {
     this.isFavorite = !this.isFavorite;
     if(this.isFavorite) this.textButtonFavorite = "Quitar de Favoritos"
     else this.textButtonFavorite = "Agregar a Favoritos";
+  }
+  deleteBookComponent(){
+    this.deleteBookEventParent.emit(this.currentBook);
   }
 }

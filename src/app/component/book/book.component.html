@@ -4,6 +4,11 @@
         <div class="card" style="background-image: url({{currentBook?.image}}); ">
             <div class="overlay">
                 <div class="content">
+                    <div class="card-header">
+                        <button (click)="deleteBookComponent()" type="button" class="m-0 close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
                     <span *ngIf="isFavorite"><i class="icon ion-android-favorite"></i></span>
                     <h2><span class="name">{{currentBook?.tittle}}</span></h2>
                     <p>{{currentBook?.matter}}</p>
