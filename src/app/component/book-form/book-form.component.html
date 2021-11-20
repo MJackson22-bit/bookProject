@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<div class="content">
+  <form class="form" (ngSubmit)="onSubmit()" #bookForm="ngForm">
+    <div class="title">Bienvenido</div>
+        <div class="subtitle">¡Aquí puedes agregar un libro!</div>
+        <div class="input-container ic1">
+          <input id="title" class="input" required name="tittle" #tittle="ngModel" [(ngModel)]="model.tittle" type="text" placeholder=" "/>
+          <div class="cut"></div>
+          <label for="title" class="placeholder">Título</label>
+        </div>
+        <div class="input-container ic2">
+          <input [(ngModel)]="model.author" required name="author" id="author" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="author" class="placeholder">Autor</label>
+        </div>
+        <div class="input-container ic2">
+          <input  [(ngModel)]="model.description" required name="description" id="description" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="description" class="placeholder">Descripción</label>
+        </div>
+        <div class="input-container ic2">
+          <input  [(ngModel)]="model.publication" required name="publication" id="publication" class="input" type="date" placeholder=" " />
+          <div class="cut"></div>
+          <label for="publication" class="placeholder">Fecha de publicación</label>
+        </div>
+        <div class="input-container ic2">
+          <input  [(ngModel)]="model.matter" required name="model" id="matter" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="matter" class="placeholder">Materia</label>
+        </div>
+        <div class="input-container ic2">
+            <input  [(ngModel)]="model.synopsis" required name="synopsis" id="synopsis" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="synopsis" class="placeholder">Sinopsis</label>
+          </div>
+          <div class="input-container ic2">
+            <input  [(ngModel)]="model.image" name="image" id="image" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="image" class="placeholder">Imagen</label>
+          </div>
+          <button type="button" (click)="newBook(); bookForm.reset()" class="btn">Reset</button>  
+            <button type="submit" (disabled)="!bookForm.form.valid" class="btn" style="float: right;">Guardar</button>  
+  </form>
+</div>
