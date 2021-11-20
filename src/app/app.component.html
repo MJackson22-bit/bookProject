@@ -26,7 +26,8 @@
   <div class="row col-md-9">
     <app-book (deleteBookEventParent)="deleteBook($event)" [currentBook]="item" *ngFor="let item of bookListObject"></app-book>
   </div>
-  <app-book-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-form>
+  <!--<app-book-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-form>-->
+  <app-book-reactive-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-reactive-form>
 </div> 
 <app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>
 <app-footer></app-footer>

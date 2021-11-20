@@ -1,1 +1,44 @@
-<p>book-reactive-form works!</p>
+<!DOCTYPE html>
+<div class="content">
+  <form class="form" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="title">Bienvenido</div>
+        <div class="subtitle">¡Aquí puedes agregar un libro!</div>
+        <div class="input-container ic1">
+          <input id="title" class="input" formControlName="tittle" name="tittle"  type="text" placeholder=" "/>
+          <div class="cut"></div>
+          <label for="title" class="placeholder">Título</label>
+        </div>
+        <div class="input-container ic2">
+          <input  formControlName="author" name="author" id="author" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="author" class="placeholder">Autor</label>
+        </div>
+        <div class="input-container ic2">
+          <input  formControlName="description" name="description" id="description" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="description" class="placeholder">Descripción</label>
+        </div>
+        <div class="input-container ic2">
+          <input formControlName="publicattion" name="publication" id="publication" class="input" type="date" placeholder=" " />
+          <div class="cut"></div>
+          <label for="publication" class="placeholder">Fecha de publicación</label>
+        </div>
+        <div class="input-container ic2">
+          <input  formControlName="matter" name="model" id="matter" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="matter" class="placeholder">Materia</label>
+        </div>
+        <div class="input-container ic2">
+            <input  formControlName="synopsis" name="synopsis" id="synopsis" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="synopsis" class="placeholder">Sinopsis</label>
+          </div>
+          <div class="input-container ic2">
+            <input  formControlName="image" name="image" id="image" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="image" class="placeholder">Imagen</label>
+          </div>
+          <button type="button" (click)="bookForm.reset()" class="btn">Reset</button>  
+            <button type="submit" (disabled)="!bookForm.valid" class="btn" style="float: right;">Guardar</button>  
+  </form>
+</div>
