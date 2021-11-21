@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { bookDescriptionJson } from '../../_files/book';
 import { Book } from '../../models/book';
 
@@ -9,22 +9,21 @@ import { Book } from '../../models/book';
 })
 export class SearchComponent implements OnInit {
   bookListObject: Book[] = bookDescriptionJson;
+  showNewBook = false;
   bookToFind: string = "";
+  @Output()
+  resetBookEventParent = new EventEmitter<Book[]>();
+  @Output()
+  findBookEventParent = new EventEmitter<string>();
+  @Output()
+  showAddBookEventParent = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit(): void {
   }
+  showAddBookForm(){
+    this.showAddBookEventParent.emit(!this.showNewBook);
+  }
   
-  
-  findBook() {
-    this.bookListObject = bookDescriptionJson.filter(m => m.tittle.toLowerCase().includes(this.bookToFind.toLowerCase()));
-  }
-  resetListBook(){
-    this.bookListObject = bookDescriptionJson;
-    this.bookToFind = "";
-  }
-  deleteBook(book: Book){
-    this.bookListObject = this.bookListObject.filter(m => m.id != book.id);
-  }
 
 }

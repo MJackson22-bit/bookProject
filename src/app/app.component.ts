@@ -9,26 +9,5 @@ import { bookDescriptionJson } from './_files/book';
 })
 export class AppComponent {
   title = 'Book - Jack';
-  bookListObject: Book[] = bookDescriptionJson;
-  bookToFind: string = "";
-  showNewBook = false;
-
-  findBook() {
-    this.bookListObject = bookDescriptionJson.filter(m => m.tittle.toLowerCase().includes(this.bookToFind.toLowerCase()));
-  }
-  resetListBook(){
-    this.bookListObject = bookDescriptionJson;
-    this.bookToFind = "";
-  }
-  deleteBook(book: Book){
-    this.bookListObject = this.bookListObject.filter(m => m.id != book.id);
-  }
-  showAddBookForm(){
-    this.showNewBook = !this.showNewBook;
-  }
-  addBook(book: Book){
-    bookDescriptionJson.push(book);
-    this.showAddBookForm();
-  }
 
 }

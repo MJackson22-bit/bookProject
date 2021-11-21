@@ -1,33 +1,4 @@
 <!DOCTYPE html>
 <app-menu></app-menu>
-<div class="row" style="float: right; margin-top: 15px; margin-right: 80px;">
-  <div class="form-inline">
-    <div class="form-group">
-      <div class="column">
-        <input [(ngModel)]="bookToFind" type="text" class="form-control" id="inputBuscar" placeholder="Ingrese nombre del libro..." />
-      </div>
-    </div>
-    <div class="colum">
-      <button (click)="findBook()" class="btn mb-2 mr-2">Buscar</button>
-    </div>
-    <div class="colum">
-      <button (click)="resetListBook()" class="btn mb-2 mr-2">Reset</button>
-    </div>
-    <div class="colum">
-      <button (click)="showAddBookForm()" class="btn mb-2">{{showNewBook?"Cerrar":"Agregar libro"}}</button>
-    </div>
-  </div>
- 
-</div>
-<svg width="100vw" height="5vh">
-  <text x="40%" y="95%">Novedades</text>
-</svg>
-<div class="row">
-  <div class="row col-md-9">
-    <app-book (deleteBookEventParent)="deleteBook($event)" [currentBook]="item" *ngFor="let item of bookListObject"></app-book>
-  </div>
-  <!--<app-book-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-form>-->
-  <app-book-reactive-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-reactive-form>
-</div> 
-<app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

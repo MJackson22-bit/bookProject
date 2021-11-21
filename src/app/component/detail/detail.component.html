@@ -1,0 +1,165 @@
+<div class="container" style="margin-top:20px;">
+  <div class="row">
+    <div class="col" align="right">
+      <img src={{currentBook?.image}}>
+    </div>
+
+    <div class="col" style="float:left;">
+
+      <div class="card-custom">
+        <div class="row">
+          <div class="col-5 book-image d-sm-none">
+            <img class="portada" itemprop="image"
+              src={{currentBook?.image}}
+              alt="La cuenta atrás para el verano" title="La cuenta atrás para el verano" width="130" height="150">
+          </div>
+          <div class="col-7 col-sm-12">
+            <h3 class="title">La cuenta atrás para el verano</h3>
+            <h4 class="subtitle">La vida son recuerdos y los míos tienen nombres de persona</h4>
+
+            <h2 class="author"><a href="https://www.todostuslibros.com/autor/la-vecina-rubia" class="author">{{currentBook?.author}}</a></h2>
+            <div class="rating">
+              <span >
+                <i class="far fa-star"></i>
+              </span>
+              <span >
+                <i ></i>
+              </span>
+              <span>
+                <i class="far fa-star"></i>
+              </span>
+              <span >
+                <i class="far fa-star"></i>
+              </span>
+              <span >
+                <i class="far fa-star"></i>
+              </span>
+            </div>
+            <dl class="row d-block d-sm-none">
+              <dt class="col-12 col-md-3 col-lg-5 d-block d-sm-none">Editorial:</dt>
+              <dd class="col-12 col-md-9 col-lg-7 d-block d-sm-none"><a
+                  href="https://www.todostuslibros.com/editorial/libros-cupula">Libros Cúpula</a></dd>
+              <dt class="col-12 col-md-3 col-lg-5 d-block d-sm-none">ISBN:</dt>
+              <dd class="col-12 col-md-9 col-lg-7 d-block d-sm-none"> 978-84-480-2883-1</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 synopsis border-bottom d-none d-sm-block">
+            <div class="synopsis-short">
+              {{currentBook?.description}}
+              <a href="#synopsis" class="btn btn-text">
+                <span class="true">
+                  <!--<i class="fas fa-plus">--> Más información</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <dl class="row materias">
+                  <dt class="col-12 col-md-3"> Materias:</dt>
+                  <dd class="col-12 col-md-9">
+
+                    <a href="https://www.todostuslibros.com/materia/ficcion-moderna-y-contemporanea_FA">{{currentBook?.matter}}</a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                <dl class="row">
+                  <dt class="col-5 col-md-3 col-lg-5 d-none d-sm-block">Editorial:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7 d-none d-sm-block"><a
+                      href="https://www.todostuslibros.com/editorial/libros-cupula">Libros Cúpula</a></dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Colección:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">Novela</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Encuadernación:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7"> Tapa blanda o Bolsillo</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">País de publicación :</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">España</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Idioma de publicación :</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">Castellano</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Idioma original :</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">Castellano</dd>
+                </dl>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                <dl class="row">
+                  <dt class="col-5 col-md-3 col-lg-5">ISBN:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7"> 978-84-480-2883-1</dd>
+                  <dt class="col-5 col-md-3 col-lg-5 d-none d-sm-block">EAN:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7 d-none d-sm-block">9788448028831</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Dimensiones:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7"> 230 x 150 mm.</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Peso:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">696 gramos</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Nº páginas:</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">416</dd>
+                  <dt class="col-5 col-md-3 col-lg-5">Fecha publicación :</dt>
+                  <dd class="col-7 col-md-9 col-lg-7">06-10-2021</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-3" align="left">
+
+      <div class="card-block">
+        <div class="book-price">
+          <strong>17,90€</strong>
+          <div class="book-price-alternative">
+            (17,21€ sin IVA)
+          </div>
+        </div>
+        <a class="btn btn-warning">Comprar</a>
+        <a class="btn btn-info">Reservar</a>
+        <span class="small d-none d-sm-none d-md-block">y recoge en tu librería preferida</span>
+
+
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item bookstores">
+            <a href="#bookshops" class="btn bookstores-link">
+              <i class="fas fa-map-marker-alt"></i><span>
+                <strong>Disponible en</strong>
+                432 librerías</span></a>
+
+          </li>
+
+          <li class="list-group-item bookshelves">
+
+
+            <a class="btn bookshelves-link"
+              href="https://www.todostuslibros.com/login?_next=https://www.todostuslibros.com/libros/la-cuenta-atras-para-el-verano_978-84-480-2883-1">
+              <i class="far fa-heart"></i>
+              <span> Añadir a estantería</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div id="synopsis" class="container" style="margin-top: 40px;">
+        <div class="row content-block">
+            <div class="col-md-3">
+                <div class="before-tittle">Sinopsis</div>
+                <h2 class="page-tittle left">{{currentBook?.tittle}}</h2>
+            </div>
+            <div class="col-md-9 synopsis">
+                <p>{{currentBook?.synopsis}}</p>
+            </div>
+        </div>
+    
+    </div>
+  </div>
+</div>

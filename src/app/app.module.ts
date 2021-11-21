@@ -12,6 +12,14 @@ import { DescriptionComponent } from './component/description/description.compon
 import { SearchComponent } from './component/search/search.component';
 import { BookFormComponent } from './component/book-form/book-form.component';
 import { BookReactiveFormComponent } from './component/book-reactive-form/book-reactive-form.component';
+import { DetailComponent } from './component/detail/detail.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { HomeComponent } from './component/home/home.component';
+import { CategoryComponent } from './component/category/category.component';
+import { CoursesComponent } from './component/courses/courses.component';
+import { TecnologyComponent } from './component/tecnology/tecnology.component';
+import { ChildishComponent } from './component/childish/childish.component';
+import { ListBookComponent } from './component/list-book/list-book.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +30,15 @@ import { BookReactiveFormComponent } from './component/book-reactive-form/book-r
     DescriptionComponent,
     SearchComponent,
     BookFormComponent,
-    BookReactiveFormComponent
+    BookReactiveFormComponent,
+    DetailComponent,
+    PageNotFoundComponent,
+    HomeComponent,
+    CategoryComponent,
+    CoursesComponent,
+    TecnologyComponent,
+    ChildishComponent,
+    ListBookComponent
   ],
   imports: [
     BrowserModule,
