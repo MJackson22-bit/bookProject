@@ -12,7 +12,7 @@
                     <span *ngIf="isFavorite"><i class="icon ion-android-favorite"></i></span>
                     <h2><span class="name">{{currentBook?.tittle}}</span></h2>
                     <p>{{currentBook?.matter}}</p>
-                    <a [routerLink]="['/detail/', currentBook?.id]" >Ir a Sinopsis</a>
+                    <a [routerLink]="['/detail/', currentBook?.id, isFavorite]" >Ir a Sinopsis</a>
                     <button (click)="addFavorite()">{{textButtonFavorite}}</button>
                 </div>
             </div>

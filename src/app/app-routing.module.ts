@@ -11,7 +11,7 @@ import { TecnologyComponent } from './component/tecnology/tecnology.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'detail/:id', component: DetailComponent},
+  { path: 'detail/:id/:isFavorite', component: DetailComponent},
   { path: 'category', component: CategoryComponent},
   { path: 'courses', component: CoursesComponent},
   { path: '*', component: PageNotFoundComponent},

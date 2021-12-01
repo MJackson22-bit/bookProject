@@ -10,13 +10,20 @@ import { Book } from 'src/app/models/book';
 })
 export class DetailComponent implements OnInit {
   currentBook?: Book;
-  constructor(private route: ActivatedRoute){
+  getIsFavorite?: string;
+  isFav?: boolean = false;
+  constructor(private route: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.currentBook = bookDescriptionJson.filter(m => m.id == Number(id))[0];
+    const isFavorite = this.route.snapshot.paramMap.get('isFavorite');
+    this.getIsFavorite = isFavorite?.toString();
+    if(this.getIsFavorite == "true"){
+      this.isFav = true;
+    }
   }
 
 }
