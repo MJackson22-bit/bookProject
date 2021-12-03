@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { CoursesComponent } from './component/courses/courses.component';
 import { TecnologyComponent } from './component/tecnology/tecnology.component';
 import { ChildishComponent } from './component/childish/childish.component';
 import { ListBookComponent } from './component/list-book/list-book.component';
+import { VeterinariaComponent } from './component/veterinaria/veterinaria.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +40,15 @@ import { ListBookComponent } from './component/list-book/list-book.component';
     CoursesComponent,
     TecnologyComponent,
     ChildishComponent,
-    ListBookComponent
+    ListBookComponent,
+    VeterinariaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

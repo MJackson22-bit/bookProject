@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Veterinaria } from 'src/app/models/veterianaria';
+import { BookService } from 'src/app/service/book.service';
 import { Book } from '../../models/book'
 import { bookDescriptionJson } from '../../_files/book';
 
@@ -9,13 +11,15 @@ import { bookDescriptionJson } from '../../_files/book';
   styleUrls: ['./list-book.component.css']
 })
 export class ListBookComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  
+  vetListObject?: Veterinaria[];
   bookListObject: Book[] = bookDescriptionJson;
   bookToFind: string = "";
   showNewBook = false;
-
+  constructor(private vetService: BookService){}
+  ngOnInit(): void {
+    this.vetService.getVets().subscribe(data => this.vetListObject = data);
+  }
   findBook() {
     this.bookListObject = bookDescriptionJson.filter(m => m.tittle.toLowerCase().includes(this.bookToFind.toLowerCase()));
   }

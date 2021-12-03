@@ -26,5 +26,13 @@
     </div>
     <!--<app-book-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-form>-->
     <app-book-reactive-form (addBookEventFromParent)="addBook($event)" [hidden]="!showNewBook"></app-book-reactive-form>
-  </div> 
+  </div>
+  <div class="row">
+    <svg width="100vw" height="5vh">
+      <text x="40%" y="95%">Veterinaria</text>
+    </svg>
+    <div class="row col-md-9">
+      <app-veterinaria [currentVet]="item" *ngFor="let item of vetListObject"></app-veterinaria>
+    </div>
+  </div>
   <app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>
