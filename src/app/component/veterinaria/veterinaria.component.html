@@ -5,13 +5,15 @@
             <div class="overlay">
                 <div class="content">
                     <div class="card-header">
-                        <button type="button" class="m-0 close" data-dismiss="toast" aria-label="Close">
+                        <button (click)="deleteVetComponent()"  type="button" class="m-0 close" data-dismiss="toast" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                     </div>
                     <span><i class="icon ion-android-favorite"></i></span>
                     <h2><span class="name">{{currentVet?.nombre}}</span></h2>
                     <p>{{currentVet?.aplicabilidad}}</p>
+                    <a [routerLink]="['/edit/', currentVet?.id]" >Editar</a>
+                    <button>Agregar al carrito</button>
                 </div>
             </div>
         </div>

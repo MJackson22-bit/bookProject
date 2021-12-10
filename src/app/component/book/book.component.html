@@ -9,7 +9,7 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                     </div>
-                    <span *ngIf="isFavorite"><i class="icon ion-android-favorite"></i></span>
+                    <span *ngIf="isFavorite"><i class="icon ion-android-sh"></i></span>
                     <h2><span class="name">{{currentBook?.tittle}}</span></h2>
                     <p>{{currentBook?.matter}}</p>
                     <a [routerLink]="['/detail/', currentBook?.id, isFavorite]" >Ir a Sinopsis</a>

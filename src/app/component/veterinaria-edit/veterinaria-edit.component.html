@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<div class="container" >
+    <div class="row">
+    
+        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <div class="content">
+                <form class="form"  (ngSubmit)="onSubmit()" #bookForm="ngForm">
+                  <div class="title">Bienvenido</div>
+                      <div class="subtitle">¡Aquí puedes agregar un libro!</div>
+                      <div class="input-container ic1">
+                          <input id="nombre" class="input" [(ngModel)]="vet.nombre" name="nombre"  type="text"  placeholder=" ">
+                          <div class="cut"></div>
+                          <label for="nombre" class="placeholder">Nombre</label>
+                        </div>
+                        <div class="input-container ic2">
+                          <input  [(ngModel)]="vet.descripcion" name="descripcion" id="descripcion" class="input" type="text" placeholder=" " />
+                          <div class="cut"></div>
+                          <label for="descripcion" class="placeholder">Descripción</label>
+                        </div>
+                        <div class="input-container ic2">
+                          <input [(ngModel)]="vet.modo" name="modo" id="modo" class="input" type="text" placeholder=" " />
+                          <div class="cut"></div>
+                          <label for="modo" class="placeholder">Modo</label>
+                        </div>
+                        <div class="input-container ic2">
+                          <input type="text" [(ngModel)]="vet.formulacion" name="formulacion" id="formulacion" class="input" placeholder=" " />
+                          <div class="cut"></div>
+                          <label for="formulacion" class="placeholder">Formulación</label>
+                        </div>
+                        <div class="input-container ic2">
+                          <input  [(ngModel)]="vet.indicaciones" name="indicaciones" id="indicaciones" class="input" type="text" placeholder=" " />
+                          <div class="cut"></div>
+                          <label for="indicaciones" class="placeholder">Indicaciones</label>
+                        </div>
+                        <div class="input-container ic2">
+                            <input name="dosisAdm" [(ngModel)]="vet.dosisAdm" id="dosisAdm" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="dosisAdm" class="placeholder">Dosis Administrativa</label>
+                          </div>
+                          <div class="input-container ic2">
+                            <input  [(ngModel)]="vet.aplicabilidad" name="aplicabilidad"  id="aplicabilidad" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="aplicabilidad" class="placeholder">Aplicabilidad</label>
+                          </div>
+                          <div class="input-container ic2">
+                            <input  [(ngModel)]="vet.presentacion" name="presentacion" id="presentacion" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="presentacion" class="placeholder">Presentación</label>
+                          </div>
+                          <div class="input-container ic2">
+                            <input  [(ngModel)]="vet.image" name="image"  id="image" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="image" class="placeholder">Imagen</label>
+                          </div>
+                          <div class="input-container ic2">
+                            <input  [(ngModel)]="vet.imageDetail" name="imageDetail" id="imageDetail" class="input" type="text" placeholder=" " />
+                            <div class="cut"></div>
+                            <label for="imageDetail" class="placeholder">Imagen Presentación</label>
+                          </div>
+                        <button type="button"  class="btn1">Reset</button>  
+                          <button type="submit" class="btn2" style="float: right;">Guardar</button>  
+                </form>
+              </div>
+        </div>
+    </div>
+</div>

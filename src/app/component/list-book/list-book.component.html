@@ -14,6 +14,9 @@
       <div class="colum">
         <button (click)="showAddBookForm()" class="btn mb-2">{{showNewBook?"Cerrar":"Agregar libro"}}</button>
       </div>
+      <div class="colum">
+        <button (click)="showAddVetForm()" class="btn mb-2">{{showNewVet?"Cerrar":"Agregar Producto"}}</button>
+      </div>
     </div>
    
   </div>
@@ -32,7 +35,8 @@
       <text x="40%" y="95%">Veterinaria</text>
     </svg>
     <div class="row col-md-9">
-      <app-veterinaria [currentVet]="item" *ngFor="let item of vetListObject"></app-veterinaria>
+      <app-veterinaria (deleteVetEventParent)="deleteVet($event)" [currentVet]="item" *ngFor="let item of vetListObject"></app-veterinaria>
     </div>
+    <app-veterinaria-reactive-form (addVetEventFromParent)="addVet($event)" [hidden]="!showNewVet"></app-veterinaria-reactive-form>
   </div>
   <app-description [currentBook]="item" *ngFor="let item of bookListObject"></app-description>

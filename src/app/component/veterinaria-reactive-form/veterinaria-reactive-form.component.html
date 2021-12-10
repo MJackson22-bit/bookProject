@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<div class="content">
+  <form class="form" [formGroup]="vetForm" (ngSubmit)="onSubmit()">
+    <div class="title">Bienvenido</div>
+        <div class="subtitle">¡Aquí puedes agregar un libro!</div>
+        <div class="input-container ic1">
+            <input id="nombre" class="input" formControlName="nombre" name="nombre"  type="text" placeholder=" "/>
+            <div class="cut"></div>
+            <label for="nombre" class="placeholder">Nombre</label>
+          </div>
+          <div class="input-container ic2">
+            <input  formControlName="descripcion" name="descripcion" id="descripcion" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="descripcion" class="placeholder">Descripción</label>
+          </div>
+          <div class="input-container ic2">
+            <input  formControlName="modo" name="modo" id="modo" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="modo" class="placeholder">Modo</label>
+          </div>
+          <div class="input-container ic2">
+            <input type="text" formControlName="formulacion" name="formulacion" id="formulacion" class="input" placeholder=" " />
+            <div class="cut"></div>
+            <label for="formulacion" class="placeholder">Formulación</label>
+          </div>
+          <div class="input-container ic2">
+            <input  formControlName="indicaciones" name="indicaciones" id="indicaciones" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="indicaciones" class="placeholder">Indicaciones</label>
+          </div>
+          <div class="input-container ic2">
+              <input  formControlName="dosisAdm" name="dosisAdm" id="dosisAdm" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="dosisAdm" class="placeholder">Dosis Administrativa</label>
+            </div>
+            <div class="input-container ic2">
+              <input  formControlName="aplicabilidad" name="aplicabilidad" id="aplicabilidad" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="aplicabilidad" class="placeholder">Aplicabilidad</label>
+            </div>
+            <div class="input-container ic2">
+              <input  formControlName="presentacion" name="presentacion" id="presentacion" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="presentacion" class="placeholder">Presentación</label>
+            </div>
+            <div class="input-container ic2">
+              <input  formControlName="image" name="image" id="image" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="image" class="placeholder">Imagen</label>
+            </div>
+            <div class="input-container ic2">
+              <input  formControlName="imageDetail" name="imageDetail" id="imageDetail" class="input" type="text" placeholder=" " />
+              <div class="cut"></div>
+              <label for="imageDetail" class="placeholder">Imagen Presentación</label>
+            </div>
+          <button type="button" (click)="vetForm.reset()" class="btn">Reset</button>  
+            <button type="submit" (disabled)="!vetForm.valid" class="btn" style="float: right;">Guardar</button>  
+  </form>
+</div>

@@ -22,6 +22,8 @@ import { TecnologyComponent } from './component/tecnology/tecnology.component';
 import { ChildishComponent } from './component/childish/childish.component';
 import { ListBookComponent } from './component/list-book/list-book.component';
 import { VeterinariaComponent } from './component/veterinaria/veterinaria.component';
+import { VeterinariaReactiveFormComponent } from './component/veterinaria-reactive-form/veterinaria-reactive-form.component';
+import { VeterinariaEditComponent } from './component/veterinaria-edit/veterinaria-edit.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { VeterinariaComponent } from './component/veterinaria/veterinaria.compon
     TecnologyComponent,
     ChildishComponent,
     ListBookComponent,
-    VeterinariaComponent
+    VeterinariaComponent,
+    VeterinariaReactiveFormComponent,
+    VeterinariaEditComponent
   ],
   imports: [
     BrowserModule,

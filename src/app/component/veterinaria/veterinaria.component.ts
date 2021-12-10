@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Veterinaria } from '../../models/veterianaria';
 
 @Component({
@@ -9,9 +9,15 @@ import { Veterinaria } from '../../models/veterianaria';
 export class VeterinariaComponent implements OnInit {
   @Input()
   currentVet?: Veterinaria;
+  
+  @Output()
+  deleteVetEventParent = new EventEmitter<Veterinaria>();
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.currentVet);
   }
-
+  deleteVetComponent(){
+    this.deleteVetEventParent.emit(this.currentVet);
+  }
 }

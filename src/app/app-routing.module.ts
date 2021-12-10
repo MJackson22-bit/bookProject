@@ -8,6 +8,7 @@ import { HomeComponent } from './component/home/home.component';
 import { ListBookComponent } from './component/list-book/list-book.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { TecnologyComponent } from './component/tecnology/tecnology.component';
+import { VeterinariaEditComponent } from './component/veterinaria-edit/veterinaria-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'childish', component: ChildishComponent},
   { path: 'list-book', component: ListBookComponent},
   { path: 'tecnology', component: TecnologyComponent},
+  { path: 'edit/:id', component: VeterinariaEditComponent},
 ];
 
 @NgModule({
